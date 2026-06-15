@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getProcessPage, processPages } from "@/lib/processes";
+import ProcessPageTemplate from "../ProcessPageTemplate";
 
 type ProcessPageProps = {
   params: Promise<{
@@ -24,6 +25,9 @@ export async function generateMetadata({
 
   return {
     title: page ? `${page.title} | Satmi Process` : "Satmi Process",
+    description: page
+      ? `Discover ${page.title.toLowerCase()} — ${page.curiosity.question}`
+      : "Satmi incense making process",
   };
 }
 
@@ -36,19 +40,6 @@ export default async function ProcessPage({ params }: ProcessPageProps) {
   }
 
   return (
-    <main className="page-shell">
-      <section className="process-shell">
-        <p className="eyebrow">Process {page.step}</p>
-        <h1>{page.title}</h1>
-        <p>
-          Blank template for the future incense-making animation, redirect, or explainer
-          content for this step.
-        </p>
-        <div className="empty-stage">
-          <span>Reserved for the step content.</span>
-        </div>
-        <p className="footer-note">Route: {page.path}</p>
-      </section>
-    </main>
+    <ProcessPageTemplate page={page} totalSteps={processPages.length} />
   );
 }
