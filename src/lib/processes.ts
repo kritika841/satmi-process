@@ -23,6 +23,7 @@ export type ProcessPage = {
   title: string;
   path: string;
   heroBanner: string;
+  heroIllustration: string;
   theme: ProcessTheme;
   ingredients: string[];
   curiosity: { question: string; answer: string };
@@ -89,6 +90,7 @@ export const processPages: ProcessPage[] = [
     title: "Nag Champa",
     path: "/process/1/",
     heroBanner: "",
+    heroIllustration: "/images/incense illustration/nagchampa.png",
     theme: {
       pageBg: "#fdf5e6",
       heroGradient: "linear-gradient(135deg,#5c3520 0%,#7a4830 35%,#c8934a 70%,#5c3520 100%)",
@@ -111,28 +113,28 @@ export const processPages: ProcessPage[] = [
         description: TEXT.champa.desc,
         caption: TEXT.champa.caption,
         sceneImage: "/images/nagchampa/scene-1.png",
-        ingredientImage: "/images/nagchampa/ingredient.png",
+        ingredientImage: "/images/nagchampa/ingredient-step1.png",
       },
       {
         number: 2,
         title: "Selecting the finest blooms",
         description: "Only fully opened, fragrant Champa blossoms are chosen. Each petal is gently inspected — if it doesn't carry that distinctive sweet warmth, it doesn't make the cut.",
         sceneImage: "/images/nagchampa/scene-2.png",
-        ingredientImage: "/images/nagchampa/ingredient.png",
+        ingredientImage: "/images/nagchampa/ingredient-step2.png",
       },
       {
         number: 3,
         title: "Stone-grinding to a soft powder",
         description: "The dried petals are slowly stone-ground into a silky, aromatic powder — the beating heart of every Nag Champa stick.",
         sceneImage: "/images/nagchampa/scene-3.png",
-        ingredientImage: "/images/nagchampa/ingredient.png",
+        ingredientImage: "/images/nagchampa/ingredient-step3.png",
       },
       {
         number: 4,
         title: "Sun-drying together",
         description: "Champa powder and Jatamanshi root are spread on bamboo trays and dried together under the open sky — a shared ritual that connects all our ingredients to the same source.",
         sceneImage: COMMON.drying,
-        ingredientImage: "/images/nagchampa/ingredient.png",
+        ingredientImage: "/images/nagchampa/ingredient-step4.png",
       },
       {
         number: 5,
@@ -140,7 +142,7 @@ export const processPages: ProcessPage[] = [
         description: TEXT.jatamanshi.desc,
         caption: TEXT.jatamanshi.caption,
         sceneImage: "/images/nagchampa/scene-4.png",
-        ingredientImage: "/images/nagchampa/ingredient.png",
+        ingredientImage: "/images/ingredients/jatamansi.png",
       },
     ],
     mixingStep: {
@@ -179,6 +181,7 @@ export const processPages: ProcessPage[] = [
     title: "Oudh",
     path: "/process/2/",
     heroBanner: "",
+    heroIllustration: "/images/incense illustration/oudh.png",
     theme: {
       pageBg: "#f7ead8",
       heroGradient: "linear-gradient(135deg,#3d1f0a 0%,#6b3a18 35%,#b07030 70%,#3d1f0a 100%)",
@@ -201,28 +204,28 @@ export const processPages: ProcessPage[] = [
         description: TEXT.kasturi.desc,
         caption: TEXT.kasturi.caption,
         sceneImage: "/images/oudh/scene-1.png",
-        ingredientImage: "/images/oudh/ingredient.png",
+        ingredientImage: "/images/oudh/ingredient-step1.png",
       },
       {
         number: 2,
         title: "Selecting the finest resin",
         description: "Only the richest, darkest Kasturi pieces are chosen — ensuring maximum depth and complexity in every stick.",
         sceneImage: "/images/oudh/scene-2.png",
-        ingredientImage: "/images/oudh/ingredient.png",
+        ingredientImage: "/images/oudh/ingredient-step2.png",
       },
       {
         number: 3,
         title: "Traditional stone grinding",
         description: "The resin is stone-ground by hand into a fine, dark powder that preserves every note of its deep, smoky character.",
         sceneImage: "/images/oudh/scene-3.png",
-        ingredientImage: "/images/oudh/ingredient.png",
+        ingredientImage: "/images/oudh/ingredient-step3.png",
       },
       {
         number: 4,
         title: "Sun-drying together",
         description: "Kasturi powder and Jatamanshi root dry together in the open sun — the shared step that gives Oudh its grounded, earthy depth.",
         sceneImage: COMMON.drying,
-        ingredientImage: "/images/oudh/ingredient.png",
+        ingredientImage: "/images/oudh/ingredient-step4.png",
       },
       {
         number: 5,
@@ -230,7 +233,7 @@ export const processPages: ProcessPage[] = [
         description: TEXT.jatamanshi.desc,
         caption: TEXT.jatamanshi.caption,
         sceneImage: "/images/oudh/scene-5.png",
-        ingredientImage: "/images/oudh/ingredient.png",
+        ingredientImage: "/images/ingredients/jatamansi.png",
       },
     ],
     mixingStep: {
@@ -269,6 +272,7 @@ export const processPages: ProcessPage[] = [
     title: "Kesar Chandan",
     path: "/process/3/",
     heroBanner: "",
+    heroIllustration: "/images/incense illustration/kesar-chandan.png",
     theme: {
       pageBg: "#fdf6e8",
       heroGradient: "linear-gradient(135deg,#7a3a08 0%,#c47820 40%,#f5d080 75%,#7a3a08 100%)",
@@ -291,7 +295,7 @@ export const processPages: ProcessPage[] = [
         description: TEXT.kesar.desc,
         caption: TEXT.kesar.caption,
         sceneImage: "/images/kesarchandan/scene-1.png",
-        ingredientImage: "/images/kesarchandan/ingredient.png",
+        ingredientImage: "/images/kesarchandan/ingredient-step1.png",
       },
       {
         number: 2,
@@ -299,7 +303,7 @@ export const processPages: ProcessPage[] = [
         description: TEXT.chandan.desc,
         caption: TEXT.chandan.caption,
         sceneImage: "/images/kesarchandan/scene-2.png",
-        ingredientImage: "/images/kesarchandan/ingredient.png",
+        ingredientImage: "/images/kesarchandan/ingredient-step2.png",
       },
       {
         number: 3,
@@ -307,14 +311,14 @@ export const processPages: ProcessPage[] = [
         description: TEXT.jatamanshi.desc,
         caption: TEXT.jatamanshi.caption,
         sceneImage: "/images/kesarchandan/scene-3.png",
-        ingredientImage: "/images/kesarchandan/ingredient.png",
+        ingredientImage: "/images/ingredients/jatamansi.png",
       },
       {
         number: 4,
         title: "Sun-drying together",
         description: "Kesar, Chandan, and Jatamanshi rest together on bamboo trays under the open sky — a shared drying ritual that unites three very different ingredients into one.",
         sceneImage: COMMON.drying,
-        ingredientImage: "/images/kesarchandan/ingredient.png",
+        ingredientImage: "/images/kesarchandan/ingredient-step4.png",
       },
       {
         number: 5,
@@ -322,7 +326,7 @@ export const processPages: ProcessPage[] = [
         description: TEXT.cowDung.desc,
         caption: TEXT.cowDung.caption,
         sceneImage: "/images/kesarchandan/scene-5.png",
-        ingredientImage: "/images/kesarchandan/ingredient.png",
+        ingredientImage: "/images/ingredients/cowdung.png",
       },
     ],
     mixingStep: {
@@ -361,6 +365,7 @@ export const processPages: ProcessPage[] = [
     title: "Hawan",
     path: "/process/4/",
     heroBanner: "",
+    heroIllustration: "/images/incense illustration/havan.png",
     theme: {
       pageBg: "#fdf4e0",
       heroGradient: "linear-gradient(135deg,#6b2020 0%,#9a4020 40%,#c89030 75%,#6b2020 100%)",
@@ -383,14 +388,14 @@ export const processPages: ProcessPage[] = [
         description: "Our Hawan Samagri draws from dozens of sacred herbs and roots — from dried mango wood to holy basil — sourced from Himalayan forests and Ayurvedic farms that have tended these plants for generations.",
         caption: "Each herb in this blend has been part of Vedic ritual for thousands of years.",
         sceneImage: "/images/hawan/scene-1.png",
-        ingredientImage: "/images/hawan/ingredient.png",
+        ingredientImage: "/images/hawan/ingredient-step1.png",
       },
       {
         number: 2,
         title: "Selecting each component",
         description: "Every herb in the Samagri blend is individually inspected before grinding. If it doesn't carry the right sacred potency, it doesn't enter our blend.",
         sceneImage: "/images/hawan/scene-2.png",
-        ingredientImage: "/images/hawan/ingredient.png",
+        ingredientImage: "/images/hawan/ingredient-step2.png",
       },
       {
         number: 3,
@@ -398,14 +403,14 @@ export const processPages: ProcessPage[] = [
         description: TEXT.jatamanshi.desc,
         caption: TEXT.jatamanshi.caption,
         sceneImage: "/images/hawan/scene-3.png",
-        ingredientImage: "/images/hawan/ingredient.png",
+        ingredientImage: "/images/ingredients/jatamansi.png",
       },
       {
         number: 4,
         title: "Sun-drying together",
         description: "Hawan Samagri and Jatamanshi root dry together in the open sun — the same purifying warmth that Vedic fire ceremonies have always called upon.",
         sceneImage: COMMON.drying,
-        ingredientImage: "/images/hawan/ingredient.png",
+        ingredientImage: "/images/hawan/ingredient-step4.png",
       },
       {
         number: 5,
@@ -413,7 +418,7 @@ export const processPages: ProcessPage[] = [
         description: TEXT.cowDung.desc,
         caption: TEXT.cowDung.caption,
         sceneImage: "/images/hawan/scene-5.png",
-        ingredientImage: "/images/hawan/ingredient.png",
+        ingredientImage: "/images/ingredients/cowdung.png",
       },
     ],
     mixingStep: {
@@ -452,6 +457,7 @@ export const processPages: ProcessPage[] = [
     title: "Gulab",
     path: "/process/5/",
     heroBanner: "",
+    heroIllustration: "/images/incense illustration/gulab.png",
     theme: {
       pageBg: "#fdf0ee",
       heroGradient: "linear-gradient(135deg,#8b2040 0%,#c04060 35%,#d4788a 70%,#8b2040 100%)",
@@ -474,28 +480,28 @@ export const processPages: ProcessPage[] = [
         description: TEXT.rose.desc,
         caption: TEXT.rose.caption,
         sceneImage: "/images/gulab/scene-1.png",
-        ingredientImage: "/images/gulab/ingredient.png",
+        ingredientImage: "/images/gulab/ingredient-step1.png",
       },
       {
         number: 2,
         title: "Inspecting every petal",
         description: "Each petal is checked by hand — only fully opened, blemish-free petals make it into our Gulab blend. There are no shortcuts in this step.",
         sceneImage: "/images/gulab/scene-2.png",
-        ingredientImage: "/images/gulab/ingredient.png",
+        ingredientImage: "/images/gulab/ingredient-step2.png",
       },
       {
         number: 3,
         title: "Gentle shade-drying",
         description: "Petals are dried slowly in the shade — never in harsh sunlight — to prevent the precious aromatic oils from evaporating before they reach you.",
         sceneImage: "/images/gulab/scene-3.png",
-        ingredientImage: "/images/gulab/ingredient.png",
+        ingredientImage: "/images/gulab/ingredient-step3.png",
       },
       {
         number: 4,
         title: "Sun-drying together",
         description: "Once shade-dried, rose petals and Jatamanshi root come together on bamboo trays in the open sun — the shared drying ritual that unites all our ingredients.",
         sceneImage: COMMON.drying,
-        ingredientImage: "/images/gulab/ingredient.png",
+        ingredientImage: "/images/gulab/ingredient-step4.png",
       },
       {
         number: 5,
@@ -503,7 +509,7 @@ export const processPages: ProcessPage[] = [
         description: TEXT.jatamanshi.desc,
         caption: TEXT.jatamanshi.caption,
         sceneImage: "/images/gulab/scene-5.png",
-        ingredientImage: "/images/gulab/ingredient.png",
+        ingredientImage: "/images/ingredients/jatamansi.png",
       },
     ],
     mixingStep: {
@@ -542,6 +548,7 @@ export const processPages: ProcessPage[] = [
     title: "Chandan",
     path: "/process/6/",
     heroBanner: "",
+    heroIllustration: "/images/incense illustration/chandan.png",
     theme: {
       pageBg: "#fdf8f0",
       heroGradient: "linear-gradient(135deg,#4a2c10 0%,#7a4e28 35%,#c49050 70%,#4a2c10 100%)",
@@ -564,28 +571,28 @@ export const processPages: ProcessPage[] = [
         description: TEXT.chandan.desc,
         caption: TEXT.chandan.caption,
         sceneImage: "/images/chandan/scene-1.png",
-        ingredientImage: "/images/chandan/ingredient.png",
+        ingredientImage: "/images/chandan/ingredient-step1.png",
       },
       {
         number: 2,
         title: "Ageing the sacred wood",
         description: "Raw sandalwood is aged in dry storage to concentrate its aromatic oils naturally — patience is built into every step of the Chandan process.",
         sceneImage: "/images/chandan/scene-2.png",
-        ingredientImage: "/images/chandan/ingredient.png",
+        ingredientImage: "/images/chandan/ingredient-step2.png",
       },
       {
         number: 3,
         title: "Chipping and stone-grinding",
         description: "The heartwood is hand-chipped then slowly stone-ground into the finest Chandan powder — cool, creamy, and unmistakably sacred.",
         sceneImage: "/images/chandan/scene-3.png",
-        ingredientImage: "/images/chandan/ingredient.png",
+        ingredientImage: "/images/chandan/ingredient-step3.png",
       },
       {
         number: 4,
         title: "Sun-drying together",
         description: "Chandan powder and Jatamanshi root dry together in the open sun — the shared ritual that connects every Satmi fragrance to the same earth.",
         sceneImage: COMMON.drying,
-        ingredientImage: "/images/chandan/ingredient.png",
+        ingredientImage: "/images/chandan/ingredient-step4.png",
       },
       {
         number: 5,
@@ -593,7 +600,7 @@ export const processPages: ProcessPage[] = [
         description: TEXT.jatamanshi.desc,
         caption: TEXT.jatamanshi.caption,
         sceneImage: "/images/chandan/scene-5.png",
-        ingredientImage: "/images/chandan/ingredient.png",
+        ingredientImage: "/images/ingredients/jatamansi.png",
       },
     ],
     mixingStep: {

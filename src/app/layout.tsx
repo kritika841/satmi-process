@@ -22,7 +22,14 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <header className="global-header">
+          <a href="https://satmi.in/">
+            <img src="/images/logo.png" alt="Satmi" />
+          </a>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }

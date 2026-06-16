@@ -36,6 +36,7 @@ export default function ProcessPageTemplate({ page, totalSteps }: ProcessPageTem
         question={page.curiosity.question}
         answer={page.curiosity.answer}
         heroBanner={page.heroBanner}
+        heroIllustration={page.heroIllustration}
         heroGradient={theme.heroGradient}
         heroOverlay={theme.heroOverlay}
         ingredients={page.ingredients}
