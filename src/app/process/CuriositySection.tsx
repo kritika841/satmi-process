@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 type CuriositySectionProps = {
   fragrance: string;
   sanskritName: string;
-  question: string;
   answer: string;
   heroBanner: string;
   heroIllustration?: string;
@@ -17,7 +16,6 @@ type CuriositySectionProps = {
 export default function CuriositySection({
   fragrance,
   sanskritName,
-  question,
   answer,
   heroBanner,
   heroIllustration,
@@ -25,7 +23,6 @@ export default function CuriositySection({
   heroGradient,
   heroOverlay,
 }: CuriositySectionProps) {
-  const [isRevealed, setIsRevealed] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -78,33 +75,13 @@ export default function CuriositySection({
         {/* Fragrance name */}
         <h1 className="curiosity-hero__fragrance">{fragrance}</h1>
 
-        {/* Curiosity label */}
-        <span className="curiosity-hero__eyebrow">Curiosity Corner</span>
-
         {/* Question */}
-        <p className="curiosity-hero__question">{question}</p>
+        <p className="curiosity-hero__question">What&apos;s the story behind this stick?</p>
 
-        {/* Reveal toggle */}
-        <div className="curiosity-hero__reveal-area">
-          {!isRevealed ? (
-            <button
-              className="curiosity-hero__btn"
-              onClick={() => setIsRevealed(true)}
-              id="curiosity-toggle"
-            >
-              <span className="curiosity-hero__btn-text">Tap to reveal the answer</span>
-              <span className="curiosity-hero__btn-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="6 9 12 15 18 9" />
-                </svg>
-              </span>
-            </button>
-          ) : (
-            <div className="curiosity-hero__answer" id="curiosity-answer">
-              <div className="curiosity-hero__answer-line" />
-              <p>{answer}</p>
-            </div>
-          )}
+        {/* Answer */}
+        <div className="curiosity-hero__answer-static">
+          <div className="curiosity-hero__answer-line" />
+          <p>{answer}</p>
         </div>
       </div>
     </section>

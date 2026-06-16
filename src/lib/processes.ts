@@ -32,6 +32,8 @@ export type ProcessPage = {
   curiosity: { question: string; answer: string };
   journeySectionTitle: string;
   journeySteps: JourneyStep[];
+  dryingStep: { title: string; description: string; image: string };
+  mixingStep: { title: string; description: string; image: string };
   closingText: { headline: string; body: string };
   artisans: { headline: string; subheadline: string; groupImage: string };
 };
@@ -76,7 +78,30 @@ const TEXT = {
   },
 };
 
+// ─── Drying descriptions per ingredient ─────────────────────────
+const DRYING = {
+  kesar:     "Freshly picked saffron threads are left to dry,\nso their colour and aroma stay intact.",
+  rose:      "The petals are spread out and left to dry naturally,\nbefore they become part of the blend.",
+  champa:    "Once gathered, the flowers are carefully dried,\npreserving their delicate fragrance.",
+  chandan:   "After being ground into powder,\nit is left to settle before moving to the next stage.",
+  jatamansi: "The roots are dried over several days,\npreparing them for the blending process.",
+  cowDung:   "Shaped and laid out in the sun,\nit slowly dries the traditional way.",
+  kasturi:   "Once processed into powder,\nit is allowed to dry before being blended.",
+};
+
+// ─── Mixing descriptions per ingredient ─────────────────────────
+const MIXING = {
+  kesar:     "Once dried, the saffron is blended into the mix,\nbringing its distinctive character to the blend.",
+  rose:      "The dried petals are finely processed\nand mixed into the fragrance blend.",
+  champa:    "The flowers are blended with other ingredients,\nadding their soft floral notes.",
+  chandan:   "The sandalwood powder becomes part of the blend,\nbringing a fragrance known for generations.",
+  jatamansi: "The dried roots are mixed in,\nadding depth to the final composition.",
+  cowDung:   "Combined with natural ingredients,\nit forms the base of the incense stick.",
+  kasturi:   "The powder is blended in carefully,\nbecoming part of the fragrance profile.",
+};
+
 export const processPages: ProcessPage[] = [
+  /* ═══ STEP 1 — NAG CHAMPA ═══ */
   {
     step: "1",
     fragrance: "Nag Champa",
@@ -98,7 +123,7 @@ export const processPages: ProcessPage[] = [
     },
     ingredients: ["Champa Petals Powder", "Cow Dung", "Jatamanshi"],
     curiosity: {
-      question: "What makes Nag Champa so deeply meditative?",
+      question: "What's the story behind this stick?",
       answer: "Champa flowers blended with jatamansi and natural base – Warm, deep floral fragrance – Meditative and spiritually grounding scent",
     },
     journeySectionTitle: "Our Nag Champa journey",
@@ -128,6 +153,16 @@ export const processPages: ProcessPage[] = [
         ingredientImage: "/images/ingredients/jatamansi.png",
       },
     ],
+    dryingStep: {
+      title: "Drying",
+      description: `CHAMPA\n${DRYING.champa}\n\nCOW DUNG\n${DRYING.cowDung}\n\nJATAMANSI\n${DRYING.jatamansi}`,
+      image: COMMON.drying,
+    },
+    mixingStep: {
+      title: "Mixing",
+      description: `CHAMPA\n${MIXING.champa}\n\nCOW DUNG\n${MIXING.cowDung}\n\nJATAMANSI\n${MIXING.jatamansi}`,
+      image: COMMON.mixing,
+    },
     closingText: {
       headline: "Ancient petals. Timeless fragrance.",
       body: "Nag Champa is more than a scent — it's a tradition carried in every flower, every root, and every hand that shapes it.",
@@ -138,6 +173,8 @@ export const processPages: ProcessPage[] = [
       groupImage: COMMON.artisans,
     },
   },
+
+  /* ═══ STEP 2 — OUDH ═══ */
   {
     step: "2",
     fragrance: "Oudh",
@@ -159,7 +196,7 @@ export const processPages: ProcessPage[] = [
     },
     ingredients: ["Kasturi Powder", "Cow Dung", "Jatamanshi"],
     curiosity: {
-      question: "What makes Oudh one of the world's most prized fragrances?",
+      question: "What's the story behind this stick?",
       answer: "Rich oud with musk and jatamansi on a natural base – Gives an earthy, royal fragrance – Deep, grounding, and long-lasting calming scent",
     },
     journeySectionTitle: "Our Oudh journey",
@@ -189,6 +226,16 @@ export const processPages: ProcessPage[] = [
         ingredientImage: "/images/ingredients/jatamansi.png",
       },
     ],
+    dryingStep: {
+      title: "Drying",
+      description: `KASTURI\n${DRYING.kasturi}\n\nCOW DUNG\n${DRYING.cowDung}\n\nJATAMANSI\n${DRYING.jatamansi}`,
+      image: COMMON.drying,
+    },
+    mixingStep: {
+      title: "Mixing",
+      description: `KASTURI\n${MIXING.kasturi}\n\nCOW DUNG\n${MIXING.cowDung}\n\nJATAMANSI\n${MIXING.jatamansi}`,
+      image: COMMON.mixing,
+    },
     closingText: {
       headline: "Rare resin. Deep roots. Pure Oudh.",
       body: "From Kannauj's perfume capital to your hands — every Oudh stick carries centuries of tradition and the soul of the wild.",
@@ -199,6 +246,8 @@ export const processPages: ProcessPage[] = [
       groupImage: COMMON.artisans,
     },
   },
+
+  /* ═══ STEP 3 — KESAR CHANDAN ═══ */
   {
     step: "3",
     fragrance: "Kesar Chandan",
@@ -220,7 +269,7 @@ export const processPages: ProcessPage[] = [
     },
     ingredients: ["Kesar Powder", "Chandan Powder", "Cow Dung", "Jatamanshi"],
     curiosity: {
-      question: "Why do we blend Saffron and Sandalwood together?",
+      question: "What's the story behind this stick?",
       answer: "Saffron and sandalwood blend with jatamansi and a traditional base – Creates a warm, sacred aroma – Feels pure, devotional, and deeply calming",
     },
     journeySectionTitle: "Our Kesar Chandan journey",
@@ -258,6 +307,16 @@ export const processPages: ProcessPage[] = [
         ingredientImage: "/images/ingredients/jatamansi.png",
       },
     ],
+    dryingStep: {
+      title: "Drying",
+      description: `KESAR\n${DRYING.kesar}\n\nCHANDAN\n${DRYING.chandan}\n\nCOW DUNG\n${DRYING.cowDung}\n\nJATAMANSI\n${DRYING.jatamansi}`,
+      image: COMMON.drying,
+    },
+    mixingStep: {
+      title: "Mixing",
+      description: `KESAR\n${MIXING.kesar}\n\nCHANDAN\n${MIXING.chandan}\n\nCOW DUNG\n${MIXING.cowDung}\n\nJATAMANSI\n${MIXING.jatamansi}`,
+      image: COMMON.mixing,
+    },
     closingText: {
       headline: "Saffron gold. Sandalwood calm.",
       body: "Two of India's most sacred scents, united in every stick — bringing the glow of devotion into your daily ritual.",
@@ -268,6 +327,8 @@ export const processPages: ProcessPage[] = [
       groupImage: COMMON.artisans,
     },
   },
+
+  /* ═══ STEP 4 — HAWAN ═══ */
   {
     step: "4",
     fragrance: "Hawan",
@@ -289,7 +350,7 @@ export const processPages: ProcessPage[] = [
     },
     ingredients: ["Hawan Samagri Powder", "Cow Dung", "Jatamanshi"],
     curiosity: {
-      question: "What makes Hawan agarbatti different from all other incense?",
+      question: "What's the story behind this stick?",
       answer: "Sacred hawan herbs with jatamansi and traditional base – Smoky, temple-like natural aroma – Purifying and powerful spiritual feel",
     },
     journeySectionTitle: "Our Hawan journey",
@@ -311,6 +372,16 @@ export const processPages: ProcessPage[] = [
         ingredientImage: "/images/ingredients/jatamansi.png",
       },
     ],
+    dryingStep: {
+      title: "Drying",
+      description: `COW DUNG\n${DRYING.cowDung}\n\nJATAMANSI\n${DRYING.jatamansi}`,
+      image: COMMON.drying,
+    },
+    mixingStep: {
+      title: "Mixing",
+      description: `COW DUNG\n${MIXING.cowDung}\n\nJATAMANSI\n${MIXING.jatamansi}`,
+      image: COMMON.mixing,
+    },
     closingText: {
       headline: "Ancient fire. Modern calm.",
       body: "Hawan brings the purifying spirit of Vedic ritual into your home — one breath, one stick, one sacred moment at a time.",
@@ -321,6 +392,8 @@ export const processPages: ProcessPage[] = [
       groupImage: COMMON.artisans,
     },
   },
+
+  /* ═══ STEP 5 — GULAB ═══ */
   {
     step: "5",
     fragrance: "Gulab",
@@ -342,7 +415,7 @@ export const processPages: ProcessPage[] = [
     },
     ingredients: ["Rose Powder", "Cow Dung", "Jatamanshi"],
     curiosity: {
-      question: "How do we capture the soul of a rose in an incense stick?",
+      question: "What's the story behind this stick?",
       answer: "Fresh rose with jatamansi and natural base – Light and gentle floral fragrance – Uplifting and emotionally soothing",
     },
     journeySectionTitle: "Our Gulab journey",
@@ -372,6 +445,16 @@ export const processPages: ProcessPage[] = [
         ingredientImage: "/images/ingredients/jatamansi.png",
       },
     ],
+    dryingStep: {
+      title: "Drying",
+      description: `ROSE\n${DRYING.rose}\n\nCOW DUNG\n${DRYING.cowDung}\n\nJATAMANSI\n${DRYING.jatamansi}`,
+      image: COMMON.drying,
+    },
+    mixingStep: {
+      title: "Mixing",
+      description: `ROSE\n${MIXING.rose}\n\nCOW DUNG\n${MIXING.cowDung}\n\nJATAMANSI\n${MIXING.jatamansi}`,
+      image: COMMON.mixing,
+    },
     closingText: {
       headline: "A rose, from nature to your hands.",
       body: "Every Gulab stick is a letter written by a rose — patient, fragrant, and made with love.",
@@ -382,6 +465,8 @@ export const processPages: ProcessPage[] = [
       groupImage: COMMON.artisans,
     },
   },
+
+  /* ═══ STEP 6 — CHANDAN ═══ */
   {
     step: "6",
     fragrance: "Chandan",
@@ -403,7 +488,7 @@ export const processPages: ProcessPage[] = [
     },
     ingredients: ["Chandan Powder", "Cow Dung", "Jatamanshi"],
     curiosity: {
-      question: "Why has sandalwood been sacred in India for over 4,000 years?",
+      question: "What's the story behind this stick?",
       answer: "Pure sandalwood blended with jatamansi and natural base – Soft and soothing aroma – Brings calmness and spiritual balance",
     },
     journeySectionTitle: "Our Chandan journey",
@@ -433,6 +518,16 @@ export const processPages: ProcessPage[] = [
         ingredientImage: "/images/ingredients/jatamansi.png",
       },
     ],
+    dryingStep: {
+      title: "Drying",
+      description: `CHANDAN\n${DRYING.chandan}\n\nCOW DUNG\n${DRYING.cowDung}\n\nJATAMANSI\n${DRYING.jatamansi}`,
+      image: COMMON.drying,
+    },
+    mixingStep: {
+      title: "Mixing",
+      description: `CHANDAN\n${MIXING.chandan}\n\nCOW DUNG\n${MIXING.cowDung}\n\nJATAMANSI\n${MIXING.jatamansi}`,
+      image: COMMON.mixing,
+    },
     closingText: {
       headline: "Cool wood. Ancient calm.",
       body: "Chandan has graced temples for millennia. Now it graces your home — one hand-crafted, bamboo-less stick at a time.",

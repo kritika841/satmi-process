@@ -40,7 +40,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--header-bg, rgba(92,53,32,0.75));
+  background: var(--header-bg, rgba(92, 53, 32, 0.75));
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   display: flex;
@@ -463,6 +463,22 @@ button {
   margin: 0 auto;
 }
 
+/* Static answer (always visible, no reveal button) */
+.curiosity-hero__answer-static {
+  margin-top: 8px;
+}
+
+.curiosity-hero__answer-static p {
+  font-size: .87rem;
+  line-height: 1.74;
+  color: #ffffff;
+  opacity: 0.95;
+  text-align: center;
+  max-width: 36ch;
+  margin: 0 auto;
+  white-space: pre-line;
+}
+
 /* Ingredients strip */
 .curiosity-hero__ingredients {
   position: relative;
@@ -765,6 +781,7 @@ button {
   font-size: .85rem;
   line-height: 1.65;
   color: var(--text-secondary);
+  white-space: pre-line;
 }
 
 
@@ -908,6 +925,7 @@ button {
   .curiosity-hero__illustration--mobile {
     display: none;
   }
+
   .curiosity-hero__illustration--desktop {
     display: block;
   }

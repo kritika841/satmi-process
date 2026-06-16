@@ -3,6 +3,7 @@
 import type { ProcessPage } from "@/lib/processes";
 import CuriositySection from "./CuriositySection";
 import JourneyStep from "./JourneyStep";
+import SpecialStep from "./SpecialStep";
 import ArtisansSection from "./ArtisansSection";
 
 type ProcessPageTemplateProps = {
@@ -11,6 +12,7 @@ type ProcessPageTemplateProps = {
 };
 
 export default function ProcessPageTemplate({ page }: ProcessPageTemplateProps) {
+  const lastJourneyNum = page.journeySteps.length;
   const { theme } = page;
 
   // Inject per-page CSS variables on the root element
@@ -40,7 +42,6 @@ export default function ProcessPageTemplate({ page }: ProcessPageTemplateProps) 
       <CuriositySection
         fragrance={page.fragrance}
         sanskritName={page.sanskritName}
-        question={page.curiosity.question}
         answer={page.curiosity.answer}
         heroBanner={page.heroBanner}
         heroIllustration={page.heroIllustration}
@@ -66,6 +67,28 @@ export default function ProcessPageTemplate({ page }: ProcessPageTemplateProps) 
             />
           ))}
         </div>
+      </section>
+
+      {/* 3. Drying Step */}
+      <section className="special-steps" id="special-steps-section">
+        <SpecialStep
+          stepNumber={lastJourneyNum + 1}
+          title={page.dryingStep.title}
+          description={page.dryingStep.description}
+          image={page.dryingStep.image}
+          variant="mixing"
+        />
+
+        <div className="special-steps__connector" />
+
+        {/* 4. Mixing Step */}
+        <SpecialStep
+          stepNumber={lastJourneyNum + 2}
+          title={page.mixingStep.title}
+          description={page.mixingStep.description}
+          image={page.mixingStep.image}
+          variant="packaging"
+        />
       </section>
 
       {/* 5. Closing Text */}
