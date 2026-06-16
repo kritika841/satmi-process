@@ -99,19 +99,6 @@ export default function CuriositySection({
           )}
         </div>
       </div>
-
-      {/* Ingredients strip at bottom of hero */}
-      <div className="curiosity-hero__ingredients">
-        <span className="curiosity-hero__ing-label">Ingredients</span>
-        <ul className="curiosity-hero__ing-list">
-          {ingredients.map((ing) => (
-            <li key={ing} className="curiosity-hero__ing-item">
-              <span className="curiosity-hero__ing-dot" />
-              {ing}
-            </li>
-          ))}
-        </ul>
-      </div>
     </section>
   );
 }

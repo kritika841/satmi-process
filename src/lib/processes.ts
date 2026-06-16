@@ -11,6 +11,7 @@ export type ProcessTheme = {
   pageBg: string;
   heroGradient: string;
   heroOverlay: string;
+  heroText: string;
   accent: string;
   accentSoft: string;
   eyebrow: string;
@@ -95,6 +96,7 @@ export const processPages: ProcessPage[] = [
       pageBg: "#fdf5e6",
       heroGradient: "linear-gradient(135deg,#5c3520 0%,#7a4830 35%,#c8934a 70%,#5c3520 100%)",
       heroOverlay: "linear-gradient(to bottom,rgba(92,53,32,.25) 0%,rgba(92,53,32,.55) 40%,rgba(40,22,10,.88) 100%)",
+      heroText: "#523210",
       accent: "#c8934a",
       accentSoft: "rgba(200,147,74,.12)",
       eyebrow: "#8b5a2b",
@@ -186,6 +188,7 @@ export const processPages: ProcessPage[] = [
       pageBg: "#f7ead8",
       heroGradient: "linear-gradient(135deg,#3d1f0a 0%,#6b3a18 35%,#b07030 70%,#3d1f0a 100%)",
       heroOverlay: "linear-gradient(to bottom,rgba(61,31,10,.3) 0%,rgba(61,31,10,.6) 40%,rgba(25,12,4,.9) 100%)",
+      heroText: "#523210",
       accent: "#b07030",
       accentSoft: "rgba(176,112,48,.12)",
       eyebrow: "#7a4a18",
@@ -277,6 +280,7 @@ export const processPages: ProcessPage[] = [
       pageBg: "#fdf6e8",
       heroGradient: "linear-gradient(135deg,#7a3a08 0%,#c47820 40%,#f5d080 75%,#7a3a08 100%)",
       heroOverlay: "linear-gradient(to bottom,rgba(122,58,8,.2) 0%,rgba(122,58,8,.5) 40%,rgba(40,18,0,.88) 100%)",
+      heroText: "#523210",
       accent: "#c47820",
       accentSoft: "rgba(196,120,32,.12)",
       eyebrow: "#9a5a10",
@@ -370,6 +374,7 @@ export const processPages: ProcessPage[] = [
       pageBg: "#fdf4e0",
       heroGradient: "linear-gradient(135deg,#6b2020 0%,#9a4020 40%,#c89030 75%,#6b2020 100%)",
       heroOverlay: "linear-gradient(to bottom,rgba(107,32,32,.25) 0%,rgba(107,32,32,.55) 40%,rgba(40,10,10,.9) 100%)",
+      heroText: "#523210",
       accent: "#c89030",
       accentSoft: "rgba(200,144,48,.12)",
       eyebrow: "#8b4820",
@@ -462,6 +467,7 @@ export const processPages: ProcessPage[] = [
       pageBg: "#fdf0ee",
       heroGradient: "linear-gradient(135deg,#8b2040 0%,#c04060 35%,#d4788a 70%,#8b2040 100%)",
       heroOverlay: "linear-gradient(to bottom,rgba(139,32,64,.25) 0%,rgba(139,32,64,.55) 40%,rgba(50,10,20,.9) 100%)",
+      heroText: "#960035",
       accent: "#c04060",
       accentSoft: "rgba(192,64,96,.10)",
       eyebrow: "#9a3050",
@@ -553,6 +559,7 @@ export const processPages: ProcessPage[] = [
       pageBg: "#fdf8f0",
       heroGradient: "linear-gradient(135deg,#4a2c10 0%,#7a4e28 35%,#c49050 70%,#4a2c10 100%)",
       heroOverlay: "linear-gradient(to bottom,rgba(74,44,16,.25) 0%,rgba(74,44,16,.55) 40%,rgba(25,14,4,.9) 100%)",
+      heroText: "#523210",
       accent: "#c49050",
       accentSoft: "rgba(196,144,80,.12)",
       eyebrow: "#8a5828",

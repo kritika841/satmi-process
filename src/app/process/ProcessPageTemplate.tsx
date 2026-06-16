@@ -21,6 +21,7 @@ export default function ProcessPageTemplate({ page, totalSteps }: ProcessPageTem
     "--page-accent": theme.accent,
     "--page-accent-soft": theme.accentSoft,
     "--page-eyebrow": theme.eyebrow,
+    "--hero-text": theme.heroText,
   } as React.CSSProperties;
 
   return (
