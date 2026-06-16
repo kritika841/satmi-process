@@ -30,8 +30,6 @@ export type ProcessPage = {
   curiosity: { question: string; answer: string };
   journeySectionTitle: string;
   journeySteps: JourneyStep[];
-  mixingStep: { title: string; description: string; image: string };
-  packagingStep: { title: string; description: string; image: string };
   closingText: { headline: string; body: string };
   artisans: { headline: string; subheadline: string; groupImage: string };
 };
@@ -47,43 +45,36 @@ const COMMON = {
 // ─── Shared ingredient texts ────────────────────────────────────
 const TEXT = {
   jatamanshi: {
-    desc:    "Grown in the Himalayan region, Jatamansi roots are dried for 7–10 days after harvest.",
-    caption: "From the hills of Himalaya. Behind every ingredient is a person who knows it well.",
+    desc:    "Grown in the Himalayan region,\n\nJatamansi roots are dried for 7–10 days after harvest.",
+    caption: "From the hills of himalaya Behind every ingredient is a person who knows it well.",
   },
   cowDung: {
-    desc:    "From the villages of India, cow dung is carefully collected and sun-dried for up to two weeks.",
+    desc:    "From the villages of India,\n\ncow dung is carefully collected and sun-dried for up to two weeks.",
     caption: "A familiar morning routine in many villages across India.",
   },
   kesar: {
-    desc:    "In the valleys of Kashmir, saffron flowers bloom for just a few weeks each year.\n\nPlucked carefully then dried for 3–5 days.",
+    desc:    "In the valleys of Kashmir,\nsaffron flowers bloom for just a few weeks each year.\n\nPlucked carefully then dried for 3–5 days.",
     caption: "Long before it reaches your home, someone carefully separates every saffron thread by hand.",
   },
   chandan: {
-    desc:    "From the sandalwood trees of southern India, Chandan is harvested and dried for 2–6 weeks.",
+    desc:    "From the sandalwood trees of southern India,\n\nChandan is harvested and dried for 2–6 weeks.",
     caption: "The work is slow, but some things are worth taking time for.",
   },
   champa: {
-    desc:    "Grown in the temple towns of South India, Champa flowers are hand-picked and dried for 3–5 days.",
+    desc:    "Grown in the temple towns of South India,\n\nChampa flowers are hand-picked and dried for 3–5 days.",
     caption: "Each flower is picked before the sun grows too strong.",
   },
   rose: {
-    desc:    "Rose flowers bloom across the fields of Kannauj, Uttar Pradesh.\n\nTheir petals are dried for 4–7 days under the sun.",
-    caption: "Before it becomes a fragrance, countless petals pass through caring hands.",
+    desc:    "Rose flowers bloom across the fields of Kannauj uttar pradesh \n\nTheir petals are dried for 4–7 days under the sun.",
+    caption: "Before it becomes a fragrance, countless petals pass through caring hand",
   },
   kasturi: {
-    desc:    "In Kannauj, India's perfume capital, Kasturi powder is prepared and dried for 4–6 days.",
+    desc:    "In Kannauj, India's perfume capital,\nKasturi powder is prepared and dried for 4-6  days",
     caption: "Every batch begins with people who know the fragrance long before it reaches a box.",
   },
 };
 
 export const processPages: ProcessPage[] = [
-
-  /* ═══════════════════════════════════════════════════════
-     STEP 1 — NAG CHAMPA  (वनसुरभि)
-     Champa flowers blended with jatamansi and natural base
-     Warm, deep floral fragrance
-     Meditative and spiritually grounding scent
-  ═══════════════════════════════════════════════════════ */
   {
     step: "1",
     fragrance: "Nag Champa",
@@ -104,14 +95,13 @@ export const processPages: ProcessPage[] = [
     ingredients: ["Champa Petals Powder", "Cow Dung", "Jatamanshi"],
     curiosity: {
       question: "What makes Nag Champa so deeply meditative?",
-      answer:
-        "Champa flowers blended with Jatamansi and a natural base create a warm, deep floral fragrance that is meditative and spiritually grounding — a scent used in temples and ashrams across India for generations.",
+      answer: "Champa flowers blended with jatamansi and natural base – Warm, deep floral fragrance – Meditative and spiritually grounding scent",
     },
     journeySectionTitle: "Our Nag Champa journey",
     journeySteps: [
       {
         number: 1,
-        title: "Gathering Champa petals",
+        title: "Champa flowers",
         description: TEXT.champa.desc,
         caption: TEXT.champa.caption,
         sceneImage: "/images/nagchampa/scene-1.png",
@@ -119,46 +109,21 @@ export const processPages: ProcessPage[] = [
       },
       {
         number: 2,
-        title: "Selecting the finest blooms",
-        description: "Only fully opened, fragrant Champa blossoms are chosen. Each petal is gently inspected — if it doesn't carry that distinctive sweet warmth, it doesn't make the cut.",
+        title: "Cow Dung",
+        description: TEXT.cowDung.desc,
+        caption: TEXT.cowDung.caption,
         sceneImage: "/images/nagchampa/scene-2.png",
-        ingredientImage: "/images/nagchampa/ingredient-step2.png",
+        ingredientImage: "/images/ingredients/cowdung.png",
       },
       {
         number: 3,
-        title: "Stone-grinding to a soft powder",
-        description: "The dried petals are slowly stone-ground into a silky, aromatic powder — the beating heart of every Nag Champa stick.",
-        sceneImage: "/images/nagchampa/scene-3.png",
-        ingredientImage: "/images/nagchampa/ingredient-step3.png",
-      },
-      {
-        number: 4,
-        title: "Sun-drying together",
-        description: "Champa powder and Jatamanshi root are spread on bamboo trays and dried together under the open sky — a shared ritual that connects all our ingredients to the same source.",
-        sceneImage: COMMON.drying,
-        ingredientImage: "/images/nagchampa/ingredient-step4.png",
-      },
-      {
-        number: 5,
-        title: "Jatamanshi — the grounding note",
+        title: "Jatamanshi",
         description: TEXT.jatamanshi.desc,
         caption: TEXT.jatamanshi.caption,
         sceneImage: "/images/nagchampa/scene-4.png",
         ingredientImage: "/images/ingredients/jatamansi.png",
       },
     ],
-    mixingStep: {
-      title: "All ingredients come together",
-      description:
-        "Champa powder, Jatamanshi, and purified cow dung are blended by hand in a traditional stone mortar — the moment this fragrance truly begins.",
-      image: COMMON.mixing,
-    },
-    packagingStep: {
-      title: "Packed with purpose",
-      description:
-        "Each bundle of bamboo-less Nag Champa sticks is hand-wrapped and sealed, ready to fill your home with their meditative warmth.",
-      image: COMMON.packaging,
-    },
     closingText: {
       headline: "Ancient petals. Timeless fragrance.",
       body: "Nag Champa is more than a scent — it's a tradition carried in every flower, every root, and every hand that shapes it.",
@@ -169,13 +134,6 @@ export const processPages: ProcessPage[] = [
       groupImage: COMMON.artisans,
     },
   },
-
-  /* ═══════════════════════════════════════════════════════
-     STEP 2 — OUDH  (अगरु)
-     Rich oud with musk and jatamansi on a natural base
-     Earthy, royal fragrance
-     Deep, grounding, long-lasting calming scent
-  ═══════════════════════════════════════════════════════ */
   {
     step: "2",
     fragrance: "Oudh",
@@ -196,14 +154,13 @@ export const processPages: ProcessPage[] = [
     ingredients: ["Kasturi Powder", "Cow Dung", "Jatamanshi"],
     curiosity: {
       question: "What makes Oudh one of the world's most prized fragrances?",
-      answer:
-        "Rich oud with musk and Jatamansi on a natural base gives an earthy, royal fragrance — deep, grounding, and a long-lasting calming scent that has been prized by royalty and mystics alike for centuries.",
+      answer: "Rich oud with musk and jatamansi on a natural base – Gives an earthy, royal fragrance – Deep, grounding, and long-lasting calming scent",
     },
     journeySectionTitle: "Our Oudh journey",
     journeySteps: [
       {
         number: 1,
-        title: "Sourcing Kasturi from Kannauj",
+        title: "Kasturi powder",
         description: TEXT.kasturi.desc,
         caption: TEXT.kasturi.caption,
         sceneImage: "/images/oudh/scene-1.png",
@@ -211,46 +168,21 @@ export const processPages: ProcessPage[] = [
       },
       {
         number: 2,
-        title: "Selecting the finest resin",
-        description: "Only the richest, darkest Kasturi pieces are chosen — ensuring maximum depth and complexity in every stick.",
+        title: "Cow Dung",
+        description: TEXT.cowDung.desc,
+        caption: TEXT.cowDung.caption,
         sceneImage: "/images/oudh/scene-2.png",
-        ingredientImage: "/images/oudh/ingredient-step2.png",
+        ingredientImage: "/images/ingredients/cowdung.png",
       },
       {
         number: 3,
-        title: "Traditional stone grinding",
-        description: "The resin is stone-ground by hand into a fine, dark powder that preserves every note of its deep, smoky character.",
-        sceneImage: "/images/oudh/scene-3.png",
-        ingredientImage: "/images/oudh/ingredient-step3.png",
-      },
-      {
-        number: 4,
-        title: "Sun-drying together",
-        description: "Kasturi powder and Jatamanshi root dry together in the open sun — the shared step that gives Oudh its grounded, earthy depth.",
-        sceneImage: COMMON.drying,
-        ingredientImage: "/images/oudh/ingredient-step4.png",
-      },
-      {
-        number: 5,
-        title: "Jatamanshi — the earthy anchor",
+        title: "Jatamanshi",
         description: TEXT.jatamanshi.desc,
         caption: TEXT.jatamanshi.caption,
         sceneImage: "/images/oudh/scene-5.png",
         ingredientImage: "/images/ingredients/jatamansi.png",
       },
     ],
-    mixingStep: {
-      title: "Where the magic is blended",
-      description:
-        "Kasturi powder, Jatamanshi, and purified cow dung converge in the mortar — the moment Oudh's legendary depth is born.",
-      image: COMMON.mixing,
-    },
-    packagingStep: {
-      title: "Wrapped in reverence",
-      description:
-        "Each bundle of bamboo-less Oudh sticks is hand-wrapped with care, ready to bring sacred, smoky warmth into your space.",
-      image: COMMON.packaging,
-    },
     closingText: {
       headline: "Rare resin. Deep roots. Pure Oudh.",
       body: "From Kannauj's perfume capital to your hands — every Oudh stick carries centuries of tradition and the soul of the wild.",
@@ -261,13 +193,6 @@ export const processPages: ProcessPage[] = [
       groupImage: COMMON.artisans,
     },
   },
-
-  /* ═══════════════════════════════════════════════════════
-     STEP 3 — KESAR CHANDAN  (काशी)
-     Saffron and sandalwood blend with jatamansi
-     Warm, sacred aroma
-     Pure, devotional, and deeply calming
-  ═══════════════════════════════════════════════════════ */
   {
     step: "3",
     fragrance: "Kesar Chandan",
@@ -288,14 +213,13 @@ export const processPages: ProcessPage[] = [
     ingredients: ["Kesar Powder", "Chandan Powder", "Cow Dung", "Jatamanshi"],
     curiosity: {
       question: "Why do we blend Saffron and Sandalwood together?",
-      answer:
-        "Saffron and sandalwood blend with Jatamansi and a traditional base to create a warm, sacred aroma that feels pure, devotional, and deeply calming — used in temple offerings across India for thousands of years.",
+      answer: "Saffron and sandalwood blend with jatamansi and a traditional base – Creates a warm, sacred aroma – Feels pure, devotional, and deeply calming",
     },
     journeySectionTitle: "Our Kesar Chandan journey",
     journeySteps: [
       {
         number: 1,
-        title: "Harvesting precious Kesar",
+        title: "Kesar",
         description: TEXT.kesar.desc,
         caption: TEXT.kesar.caption,
         sceneImage: "/images/kesarchandan/scene-1.png",
@@ -303,7 +227,7 @@ export const processPages: ProcessPage[] = [
       },
       {
         number: 2,
-        title: "Sourcing Chandan from the South",
+        title: "Chandan",
         description: TEXT.chandan.desc,
         caption: TEXT.chandan.caption,
         sceneImage: "/images/kesarchandan/scene-2.png",
@@ -311,40 +235,21 @@ export const processPages: ProcessPage[] = [
       },
       {
         number: 3,
-        title: "Jatamanshi — the Himalayan root",
-        description: TEXT.jatamanshi.desc,
-        caption: TEXT.jatamanshi.caption,
-        sceneImage: "/images/kesarchandan/scene-3.png",
-        ingredientImage: "/images/ingredients/jatamansi.png",
-      },
-      {
-        number: 4,
-        title: "Sun-drying together",
-        description: "Kesar, Chandan, and Jatamanshi rest together on bamboo trays under the open sky — a shared drying ritual that unites three very different ingredients into one.",
-        sceneImage: COMMON.drying,
-        ingredientImage: "/images/kesarchandan/ingredient-step4.png",
-      },
-      {
-        number: 5,
-        title: "Preparing the sacred base",
+        title: "Cow Dung",
         description: TEXT.cowDung.desc,
         caption: TEXT.cowDung.caption,
         sceneImage: "/images/kesarchandan/scene-5.png",
         ingredientImage: "/images/ingredients/cowdung.png",
       },
+      {
+        number: 4,
+        title: "Jatamanshi",
+        description: TEXT.jatamanshi.desc,
+        caption: TEXT.jatamanshi.caption,
+        sceneImage: "/images/kesarchandan/scene-3.png",
+        ingredientImage: "/images/ingredients/jatamansi.png",
+      },
     ],
-    mixingStep: {
-      title: "Gold meets wood in the bowl",
-      description:
-        "Kesar, Chandan, Jatamanshi, and cow dung come together in exact measure — the ancient alchemy that creates Kesar Chandan's unmistakable warmth.",
-      image: COMMON.mixing,
-    },
-    packagingStep: {
-      title: "Sealed in golden warmth",
-      description:
-        "Each bundle of bamboo-less Kesar Chandan sticks is carefully wrapped, locking in saffron warmth and sandalwood cool until the moment you light it.",
-      image: COMMON.packaging,
-    },
     closingText: {
       headline: "Saffron gold. Sandalwood calm.",
       body: "Two of India's most sacred scents, united in every stick — bringing the glow of devotion into your daily ritual.",
@@ -355,13 +260,6 @@ export const processPages: ProcessPage[] = [
       groupImage: COMMON.artisans,
     },
   },
-
-  /* ═══════════════════════════════════════════════════════
-     STEP 4 — HAWAN  (आहुति)
-     Sacred hawan herbs with jatamansi and traditional base
-     Smoky, temple-like natural aroma
-     Purifying and powerful spiritual feel
-  ═══════════════════════════════════════════════════════ */
   {
     step: "4",
     fragrance: "Hawan",
@@ -382,62 +280,27 @@ export const processPages: ProcessPage[] = [
     ingredients: ["Hawan Samagri Powder", "Cow Dung", "Jatamanshi"],
     curiosity: {
       question: "What makes Hawan agarbatti different from all other incense?",
-      answer:
-        "Sacred Hawan herbs blended with Jatamansi and a traditional base create a smoky, temple-like natural aroma that is purifying and powerfully spiritual — the same sacred plants used in Vedic fire rituals for thousands of years, now in every stick.",
+      answer: "Sacred hawan herbs with jatamansi and traditional base – Smoky, temple-like natural aroma – Purifying and powerful spiritual feel",
     },
     journeySectionTitle: "Our Hawan journey",
     journeySteps: [
       {
         number: 1,
-        title: "Sourcing sacred Hawan herbs",
-        description: "Our Hawan Samagri draws from dozens of sacred herbs and roots — from dried mango wood to holy basil — sourced from Himalayan forests and Ayurvedic farms that have tended these plants for generations.",
-        caption: "Each herb in this blend has been part of Vedic ritual for thousands of years.",
-        sceneImage: "/images/hawan/scene-1.png",
-        ingredientImage: "/images/hawan/ingredient-step1.png",
-      },
-      {
-        number: 2,
-        title: "Selecting each component",
-        description: "Every herb in the Samagri blend is individually inspected before grinding. If it doesn't carry the right sacred potency, it doesn't enter our blend.",
-        sceneImage: "/images/hawan/scene-2.png",
-        ingredientImage: "/images/hawan/ingredient-step2.png",
-      },
-      {
-        number: 3,
-        title: "Jatamanshi — the Himalayan anchor",
-        description: TEXT.jatamanshi.desc,
-        caption: TEXT.jatamanshi.caption,
-        sceneImage: "/images/hawan/scene-3.png",
-        ingredientImage: "/images/ingredients/jatamansi.png",
-      },
-      {
-        number: 4,
-        title: "Sun-drying together",
-        description: "Hawan Samagri and Jatamanshi root dry together in the open sun — the same purifying warmth that Vedic fire ceremonies have always called upon.",
-        sceneImage: COMMON.drying,
-        ingredientImage: "/images/hawan/ingredient-step4.png",
-      },
-      {
-        number: 5,
-        title: "Preparing the sacred base",
+        title: "Cow Dung",
         description: TEXT.cowDung.desc,
         caption: TEXT.cowDung.caption,
         sceneImage: "/images/hawan/scene-5.png",
         ingredientImage: "/images/ingredients/cowdung.png",
       },
+      {
+        number: 2,
+        title: "Jatamanshi",
+        description: TEXT.jatamanshi.desc,
+        caption: TEXT.jatamanshi.caption,
+        sceneImage: "/images/hawan/scene-3.png",
+        ingredientImage: "/images/ingredients/jatamansi.png",
+      },
     ],
-    mixingStep: {
-      title: "The Vedic blend assembled",
-      description:
-        "Hawan Samagri powder, Jatamanshi, and purified cow dung are combined with intention — a blending ritual as sacred as the fire ceremony it evokes.",
-      image: COMMON.mixing,
-    },
-    packagingStep: {
-      title: "Wrapped in ritual intention",
-      description:
-        "Each bundle of bamboo-less Hawan sticks is sealed to preserve the sacred potency of Samagri, ready to purify and bless your space.",
-      image: COMMON.packaging,
-    },
     closingText: {
       headline: "Ancient fire. Modern calm.",
       body: "Hawan brings the purifying spirit of Vedic ritual into your home — one breath, one stick, one sacred moment at a time.",
@@ -448,13 +311,6 @@ export const processPages: ProcessPage[] = [
       groupImage: COMMON.artisans,
     },
   },
-
-  /* ═══════════════════════════════════════════════════════
-     STEP 5 — GULAB  (कुसुम)
-     Fresh rose with jatamansi and natural base
-     Light and gentle floral fragrance
-     Uplifting and emotionally soothing
-  ═══════════════════════════════════════════════════════ */
   {
     step: "5",
     fragrance: "Gulab",
@@ -475,14 +331,13 @@ export const processPages: ProcessPage[] = [
     ingredients: ["Rose Powder", "Cow Dung", "Jatamanshi"],
     curiosity: {
       question: "How do we capture the soul of a rose in an incense stick?",
-      answer:
-        "Fresh rose with Jatamansi and a natural base creates a light and gentle floral fragrance that is uplifting and emotionally soothing — every petal dried and ground by hand so the true scent of Kannauj's rose fields reaches you, unchanged.",
+      answer: "Fresh rose with jatamansi and natural base – Light and gentle floral fragrance – Uplifting and emotionally soothing",
     },
     journeySectionTitle: "Our Gulab journey",
     journeySteps: [
       {
         number: 1,
-        title: "Harvesting rose petals at dawn",
+        title: "Rose",
         description: TEXT.rose.desc,
         caption: TEXT.rose.caption,
         sceneImage: "/images/gulab/scene-1.png",
@@ -490,46 +345,21 @@ export const processPages: ProcessPage[] = [
       },
       {
         number: 2,
-        title: "Inspecting every petal",
-        description: "Each petal is checked by hand — only fully opened, blemish-free petals make it into our Gulab blend. There are no shortcuts in this step.",
+        title: "Cow Dung",
+        description: TEXT.cowDung.desc,
+        caption: TEXT.cowDung.caption,
         sceneImage: "/images/gulab/scene-2.png",
-        ingredientImage: "/images/gulab/ingredient-step2.png",
+        ingredientImage: "/images/ingredients/cowdung.png",
       },
       {
         number: 3,
-        title: "Gentle shade-drying",
-        description: "Petals are dried slowly in the shade — never in harsh sunlight — to prevent the precious aromatic oils from evaporating before they reach you.",
-        sceneImage: "/images/gulab/scene-3.png",
-        ingredientImage: "/images/gulab/ingredient-step3.png",
-      },
-      {
-        number: 4,
-        title: "Sun-drying together",
-        description: "Once shade-dried, rose petals and Jatamanshi root come together on bamboo trays in the open sun — the shared drying ritual that unites all our ingredients.",
-        sceneImage: COMMON.drying,
-        ingredientImage: "/images/gulab/ingredient-step4.png",
-      },
-      {
-        number: 5,
-        title: "Jatamanshi — the grounding note",
+        title: "Jatamanshi",
         description: TEXT.jatamanshi.desc,
         caption: TEXT.jatamanshi.caption,
         sceneImage: "/images/gulab/scene-5.png",
         ingredientImage: "/images/ingredients/jatamansi.png",
       },
     ],
-    mixingStep: {
-      title: "A garden in a bowl",
-      description:
-        "Rose powder, Jatamanshi, and purified cow dung are blended together — transforming individual ingredients into the full, blooming heart of Gulab.",
-      image: COMMON.mixing,
-    },
-    packagingStep: {
-      title: "Wrapped with petal-soft care",
-      description:
-        "Every bundle of bamboo-less Gulab sticks is gently wrapped and sealed, ready to bring the soft, uplifting warmth of rose into your home.",
-      image: COMMON.packaging,
-    },
     closingText: {
       headline: "A rose, from nature to your hands.",
       body: "Every Gulab stick is a letter written by a rose — patient, fragrant, and made with love.",
@@ -540,13 +370,6 @@ export const processPages: ProcessPage[] = [
       groupImage: COMMON.artisans,
     },
   },
-
-  /* ═══════════════════════════════════════════════════════
-     STEP 6 — CHANDAN  (श्रीगंध)
-     Pure sandalwood blended with jatamansi and natural base
-     Soft and soothing aroma
-     Brings calmness and spiritual balance
-  ═══════════════════════════════════════════════════════ */
   {
     step: "6",
     fragrance: "Chandan",
@@ -567,14 +390,13 @@ export const processPages: ProcessPage[] = [
     ingredients: ["Chandan Powder", "Cow Dung", "Jatamanshi"],
     curiosity: {
       question: "Why has sandalwood been sacred in India for over 4,000 years?",
-      answer:
-        "Pure sandalwood blended with Jatamansi and a natural base creates a soft and soothing aroma that brings calmness and spiritual balance — Chandan's cool, creamy scent has graced temples, ritual, and meditation since ancient times.",
+      answer: "Pure sandalwood blended with jatamansi and natural base – Soft and soothing aroma – Brings calmness and spiritual balance",
     },
     journeySectionTitle: "Our Chandan journey",
     journeySteps: [
       {
         number: 1,
-        title: "Sourcing Chandan heartwood",
+        title: "Chandan",
         description: TEXT.chandan.desc,
         caption: TEXT.chandan.caption,
         sceneImage: "/images/chandan/scene-1.png",
@@ -582,46 +404,21 @@ export const processPages: ProcessPage[] = [
       },
       {
         number: 2,
-        title: "Ageing the sacred wood",
-        description: "Raw sandalwood is aged in dry storage to concentrate its aromatic oils naturally — patience is built into every step of the Chandan process.",
+        title: "Cow Dung",
+        description: TEXT.cowDung.desc,
+        caption: TEXT.cowDung.caption,
         sceneImage: "/images/chandan/scene-2.png",
-        ingredientImage: "/images/chandan/ingredient-step2.png",
+        ingredientImage: "/images/ingredients/cowdung.png",
       },
       {
         number: 3,
-        title: "Chipping and stone-grinding",
-        description: "The heartwood is hand-chipped then slowly stone-ground into the finest Chandan powder — cool, creamy, and unmistakably sacred.",
-        sceneImage: "/images/chandan/scene-3.png",
-        ingredientImage: "/images/chandan/ingredient-step3.png",
-      },
-      {
-        number: 4,
-        title: "Sun-drying together",
-        description: "Chandan powder and Jatamanshi root dry together in the open sun — the shared ritual that connects every Satmi fragrance to the same earth.",
-        sceneImage: COMMON.drying,
-        ingredientImage: "/images/chandan/ingredient-step4.png",
-      },
-      {
-        number: 5,
-        title: "Jatamanshi — depth from the Himalayas",
+        title: "Jatamanshi",
         description: TEXT.jatamanshi.desc,
         caption: TEXT.jatamanshi.caption,
         sceneImage: "/images/chandan/scene-5.png",
         ingredientImage: "/images/ingredients/jatamansi.png",
       },
     ],
-    mixingStep: {
-      title: "Wood, earth, and root united",
-      description:
-        "Chandan powder, Jatamanshi, and purified cow dung are hand-blended until the mixture achieves its characteristic cool, woody, soothing character.",
-      image: COMMON.mixing,
-    },
-    packagingStep: {
-      title: "Sealed in sandalwood warmth",
-      description:
-        "Each bundle of bamboo-less Chandan sticks is wrapped and sealed to preserve its precious aromatic oils — ready to bring calmness and spiritual balance to your space.",
-      image: COMMON.packaging,
-    },
     closingText: {
       headline: "Cool wood. Ancient calm.",
       body: "Chandan has graced temples for millennia. Now it graces your home — one hand-crafted, bamboo-less stick at a time.",

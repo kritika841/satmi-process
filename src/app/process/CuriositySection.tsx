@@ -11,7 +11,6 @@ type CuriositySectionProps = {
   heroIllustration?: string;
   heroGradient: string;
   heroOverlay: string;
-  ingredients: string[];
 };
 
 export default function CuriositySection({
@@ -23,7 +22,6 @@ export default function CuriositySection({
   heroIllustration,
   heroGradient,
   heroOverlay,
-  ingredients,
 }: CuriositySectionProps) {
   const [isRevealed, setIsRevealed] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);

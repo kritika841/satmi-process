@@ -3,7 +3,6 @@
 import type { ProcessPage } from "@/lib/processes";
 import CuriositySection from "./CuriositySection";
 import JourneyStep from "./JourneyStep";
-import SpecialStep from "./SpecialStep";
 import ArtisansSection from "./ArtisansSection";
 
 type ProcessPageTemplateProps = {
@@ -11,8 +10,7 @@ type ProcessPageTemplateProps = {
   totalSteps: number;
 };
 
-export default function ProcessPageTemplate({ page, totalSteps }: ProcessPageTemplateProps) {
-  const lastJourneyNum = page.journeySteps.length;
+export default function ProcessPageTemplate({ page }: ProcessPageTemplateProps) {
   const { theme } = page;
 
   // Inject per-page CSS variables on the root element
@@ -40,14 +38,13 @@ export default function ProcessPageTemplate({ page, totalSteps }: ProcessPageTem
         heroIllustration={page.heroIllustration}
         heroGradient={theme.heroGradient}
         heroOverlay={theme.heroOverlay}
-        ingredients={page.ingredients}
       />
 
       {/* 2. Ingredient Journey */}
       <section className="journey" id="journey-section">
         <p className="journey__eyebrow">{page.journeySectionTitle}</p>
         <div className="journey__timeline">
-          {page.journeySteps.map((step, i) => (
+          {page.journeySteps.map((step) => (
             <JourneyStep
               key={step.number}
               number={step.number}
@@ -60,28 +57,6 @@ export default function ProcessPageTemplate({ page, totalSteps }: ProcessPageTem
             />
           ))}
         </div>
-      </section>
-
-      {/* 3. Mixing Step */}
-      <section className="special-steps" id="special-steps-section">
-        <SpecialStep
-          stepNumber={lastJourneyNum + 1}
-          title={page.mixingStep.title}
-          description={page.mixingStep.description}
-          image={page.mixingStep.image}
-          variant="mixing"
-        />
-
-        <div className="special-steps__connector" />
-
-        {/* 4. Packaging Step */}
-        <SpecialStep
-          stepNumber={lastJourneyNum + 2}
-          title={page.packagingStep.title}
-          description={page.packagingStep.description}
-          image={page.packagingStep.image}
-          variant="packaging"
-        />
       </section>
 
       {/* 5. Closing Text */}
