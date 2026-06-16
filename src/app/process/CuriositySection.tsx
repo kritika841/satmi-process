@@ -5,7 +5,6 @@ import { useEffect, useRef } from "react";
 type CuriositySectionProps = {
   fragrance: string;
   sanskritName: string;
-  answer: string;
   heroBanner: string;
   heroIllustration?: string;
   heroIllustrationDesktop?: string;
@@ -16,7 +15,6 @@ type CuriositySectionProps = {
 export default function CuriositySection({
   fragrance,
   sanskritName,
-  answer,
   heroBanner,
   heroIllustration,
   heroIllustrationDesktop,
@@ -77,12 +75,6 @@ export default function CuriositySection({
 
         {/* Question */}
         <p className="curiosity-hero__question">What&apos;s the story behind this stick?</p>
-
-        {/* Answer */}
-        <div className="curiosity-hero__answer-static">
-          <div className="curiosity-hero__answer-line" />
-          <p>{answer}</p>
-        </div>
       </div>
     </section>
   );

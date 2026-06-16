@@ -42,7 +42,6 @@ export default function ProcessPageTemplate({ page }: ProcessPageTemplateProps) 
       <CuriositySection
         fragrance={page.fragrance}
         sanskritName={page.sanskritName}
-        answer={page.curiosity.answer}
         heroBanner={page.heroBanner}
         heroIllustration={page.heroIllustration}
         heroIllustrationDesktop={page.heroIllustrationDesktop}
