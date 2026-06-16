@@ -9,6 +9,7 @@ type CuriositySectionProps = {
   answer: string;
   heroBanner: string;
   heroIllustration?: string;
+  heroIllustrationDesktop?: string;
   heroGradient: string;
   heroOverlay: string;
 };
@@ -20,6 +21,7 @@ export default function CuriositySection({
   answer,
   heroBanner,
   heroIllustration,
+  heroIllustrationDesktop,
   heroGradient,
   heroOverlay,
 }: CuriositySectionProps) {
@@ -53,11 +55,19 @@ export default function CuriositySection({
       {/* Gradient overlay */}
       <div className="curiosity-hero__overlay" style={{ background: heroOverlay }} />
 
-      {/* Illustration */}
+      {/* Mobile illustration */}
       {heroIllustration && (
         <div 
-          className="curiosity-hero__illustration" 
+          className="curiosity-hero__illustration curiosity-hero__illustration--mobile" 
           style={{ backgroundImage: `url('${heroIllustration}')` }} 
+        />
+      )}
+
+      {/* Desktop illustration */}
+      {heroIllustrationDesktop && (
+        <div 
+          className="curiosity-hero__illustration curiosity-hero__illustration--desktop" 
+          style={{ backgroundImage: `url('${heroIllustrationDesktop}')` }} 
         />
       )}
 

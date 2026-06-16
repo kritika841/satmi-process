@@ -23,11 +23,6 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <header className="global-header">
-          <a href="https://satmi.in/">
-            <img src="/images/logo.png" alt="Satmi" />
-          </a>
-        </header>
         {children}
       </body>
     </html>

@@ -20,6 +20,7 @@ export default function ProcessPageTemplate({ page }: ProcessPageTemplateProps) 
     "--page-accent-soft": theme.accentSoft,
     "--page-eyebrow": theme.eyebrow,
     "--hero-text": theme.heroText,
+    "--header-bg": theme.headerBg,
   } as React.CSSProperties;
 
   return (
@@ -28,6 +29,13 @@ export default function ProcessPageTemplate({ page }: ProcessPageTemplateProps) 
       id={`process-page-${page.step}`}
       style={cssVars}
     >
+      {/* Themed header */}
+      <header className="global-header">
+        <a href="https://satmi.in/">
+          <img src="/images/logo.png" alt="Satmi" />
+        </a>
+      </header>
+
       {/* 1. Hero / Curiosity Section */}
       <CuriositySection
         fragrance={page.fragrance}
@@ -36,6 +44,7 @@ export default function ProcessPageTemplate({ page }: ProcessPageTemplateProps) 
         answer={page.curiosity.answer}
         heroBanner={page.heroBanner}
         heroIllustration={page.heroIllustration}
+        heroIllustrationDesktop={page.heroIllustrationDesktop}
         heroGradient={theme.heroGradient}
         heroOverlay={theme.heroOverlay}
       />

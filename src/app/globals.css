@@ -40,12 +40,14 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #ffffff;
+  background: var(--header-bg, rgba(92,53,32,0.75));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 12px 20px;
-  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.1);
 }
 
 .global-header img {
@@ -305,6 +307,11 @@ button {
   background-repeat: no-repeat;
   pointer-events: none;
   opacity: 1;
+}
+
+/* Mobile illustration shown by default, hidden on desktop */
+.curiosity-hero__illustration--desktop {
+  display: none;
 }
 
 /* Content column — centred, limited width */
@@ -895,6 +902,14 @@ button {
 
   .curiosity-hero {
     min-height: 80vh;
+  }
+
+  /* Swap illustration: hide mobile, show desktop */
+  .curiosity-hero__illustration--mobile {
+    display: none;
+  }
+  .curiosity-hero__illustration--desktop {
+    display: block;
   }
 
   .journey-step__image-wrapper,
