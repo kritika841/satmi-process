@@ -68,24 +68,24 @@ export default function ProcessPageTemplate({ page }: ProcessPageTemplateProps) 
         </div>
       </section>
 
-      {/* 3. Drying Step */}
+      {/* 3. Mixing Step */}
       <section className="special-steps" id="special-steps-section">
         <SpecialStep
           stepNumber={lastJourneyNum + 1}
-          title={page.dryingStep.title}
-          description={page.dryingStep.description}
-          image={page.dryingStep.image}
+          title={page.mixingStep.title}
+          description={page.mixingStep.description}
+          image={page.mixingStep.image}
           variant="mixing"
         />
 
         <div className="special-steps__connector" />
 
-        {/* 4. Mixing Step */}
+        {/* 4. Drying Step */}
         <SpecialStep
           stepNumber={lastJourneyNum + 2}
-          title={page.mixingStep.title}
-          description={page.mixingStep.description}
-          image={page.mixingStep.image}
+          title={page.dryingStep.title}
+          description={page.dryingStep.description}
+          image={page.dryingStep.image}
           variant="packaging"
         />
       </section>
