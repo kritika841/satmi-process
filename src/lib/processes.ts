@@ -155,7 +155,7 @@ export const processPages: ProcessPage[] = [
     ],
     dryingStep: {
       title: "Drying",
-      description: `CHAMPA\n${DRYING.champa}\n\nCOW DUNG\n${DRYING.cowDung}\n\nJATAMANSI\n${DRYING.jatamansi}`,
+      description: "The incense sticks have now taken their final shape. \n\nThey are carefully laid out to dry naturally, allowing the moisture to fade away slowly. \n\nWith every passing day, they move one step closer to being ready.",
       image: COMMON.drying,
     },
     mixingStep: {
@@ -228,7 +228,7 @@ export const processPages: ProcessPage[] = [
     ],
     dryingStep: {
       title: "Drying",
-      description: `KASTURI\n${DRYING.kasturi}\n\nCOW DUNG\n${DRYING.cowDung}\n\nJATAMANSI\n${DRYING.jatamansi}`,
+      description: "The incense sticks have now taken their final shape. \n\nThey are carefully laid out to dry naturally, allowing the moisture to fade away slowly. \n\nWith every passing day, they move one step closer to being ready.",
       image: COMMON.drying,
     },
     mixingStep: {
@@ -309,7 +309,7 @@ export const processPages: ProcessPage[] = [
     ],
     dryingStep: {
       title: "Drying",
-      description: `KESAR\n${DRYING.kesar}\n\nCHANDAN\n${DRYING.chandan}\n\nCOW DUNG\n${DRYING.cowDung}\n\nJATAMANSI\n${DRYING.jatamansi}`,
+      description: "The incense sticks have now taken their final shape. \n\nThey are carefully laid out to dry naturally, allowing the moisture to fade away slowly. \n\nWith every passing day, they move one step closer to being ready.",
       image: COMMON.drying,
     },
     mixingStep: {
@@ -374,7 +374,7 @@ export const processPages: ProcessPage[] = [
     ],
     dryingStep: {
       title: "Drying",
-      description: `COW DUNG\n${DRYING.cowDung}\n\nJATAMANSI\n${DRYING.jatamansi}`,
+      description: "The incense sticks have now taken their final shape. \n\nThey are carefully laid out to dry naturally, allowing the moisture to fade away slowly. \n\nWith every passing day, they move one step closer to being ready.",
       image: COMMON.drying,
     },
     mixingStep: {
@@ -447,7 +447,7 @@ export const processPages: ProcessPage[] = [
     ],
     dryingStep: {
       title: "Drying",
-      description: `ROSE\n${DRYING.rose}\n\nCOW DUNG\n${DRYING.cowDung}\n\nJATAMANSI\n${DRYING.jatamansi}`,
+      description: "The incense sticks have now taken their final shape. \n\nThey are carefully laid out to dry naturally, allowing the moisture to fade away slowly. \n\nWith every passing day, they move one step closer to being ready.",
       image: COMMON.drying,
     },
     mixingStep: {
@@ -520,7 +520,7 @@ export const processPages: ProcessPage[] = [
     ],
     dryingStep: {
       title: "Drying",
-      description: `CHANDAN\n${DRYING.chandan}\n\nCOW DUNG\n${DRYING.cowDung}\n\nJATAMANSI\n${DRYING.jatamansi}`,
+      description: "The incense sticks have now taken their final shape. \n\nThey are carefully laid out to dry naturally, allowing the moisture to fade away slowly. \n\nWith every passing day, they move one step closer to being ready.",
       image: COMMON.drying,
     },
     mixingStep: {
